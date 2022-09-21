@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio 2 cookies</title>
+    </head>
+    <body onload="cheekCookies ()">
+        <p id="demo"></p>
+        <script>
+        function cheekCookies() {
+            var text="";
+            if(navigator.cookieEnabled== true){
+                text = "las cookies estan activadas";
+            }else{
+                text ="las cookies no estan activadas"
+                }
+            document.getElementById("demo").innerHTML = text;
+            }
+        
+        </script>
+        
+    </body>
+</html>
