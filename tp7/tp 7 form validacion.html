@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario para solicitar información</title>
+    <script langauge="JavaScript">
+    <!--
+        function ValidarEmail (elemento)
+        {
+            if(elemento.value.lastIndexOf("@")==-1)
+                {
+                    alert ("Introduzca una dirección valida de correo electronico.")
+                        elemento.focus()
+                        elemento.select()
+                }
+          }
+        {
+            function ValidarFormaEnviar()
+            {
+                var enviar=false
+                if(document.contacto.PorEmail.checked==true)
+                    enviar=true
+                else
+                    enviar=false
+                if (enviar==false)
+                    {
+                        alert ("Debe elegir una forma de envio para la información solicitada")
+                        return false
+                    }
+                else
+                    return true
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <form name="contacto" onSubmit="return ValidarFormaEnviar()">
+        <p>Apellidos
+            <input type="text" name="apellidos" size="35">
+        <p>Nombre
+            <input type="text" name="Nombre" size="35">
+        <p>Domicilio
+            <input type="text" name="Domicilio" size="80">
+        <p>Correo Electronico:
+            <input type="text" name="Email" size="20" onchange="return ValidarEmail(this)">
+        <p>Es cliente Nuevo?
+            <input type="radio" value="Si" name="Es cliente">Si
+            <input type="radio" name="Es cliente" value="No" checked>No
+        <p>Cómo desea que le enviemos la información?
+            <input type="checkbox" name="PorEmail" value="ON">
+            Por correo electronico;
+            <input type="checkbox" name="PorPostal" value="ON">
+            Por correo postal
+        <p>De que servicio desea recibir información?
+            <select size="1" name="Productos">
+                <option>Diseño grafico</option>
+                <option>Diseño web</option>
+                <option>Fotografía</option>
+                <option>Marketing</option>
+            </select>
+        <p>Observaciones:
+            <textarea rows="2" name="Observaciones" cols="90"></textarea><br><br>
+                <input type="submit" value="Enviar" name="BotEnviar">
+                <input type="reset" value="Restablecer" name="BotRestablecer">
+        </p>
+            
+    
+    </form>
+</body>
+</html>
